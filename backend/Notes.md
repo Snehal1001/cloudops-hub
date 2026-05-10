@@ -1,6 +1,6 @@
 ##At backend level ##
 To Activate python env - source venv/bin/activate
-To run Server - uvicorn main:app --reload
+To run Server - uvicorn app.main:app --reload
 
 ##Why Repository Pattern?
 Separates:
