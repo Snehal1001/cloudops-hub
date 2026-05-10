@@ -8,6 +8,9 @@ class Settings(BaseSettings):
 
     FRONTEND_URL: str
 
+    AZURE_STORAGE_CONNECTION_STRING: str
+    AZURE_STORAGE_CONTAINER: str
+
     model_config =  SettingsConfigDict(
         env_file = ".env",
         # env_file_encoding="utf-8"

@@ -4,6 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1.project_routes import router as project_router
 from app.core.config import settings
 
+from app.api.v1.file_routes import router as file_router
+
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION
@@ -18,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(project_router)
+app.include_router(file_router)
 
 origins = [
     "http://localhost:5173"
